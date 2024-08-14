@@ -31,3 +31,4 @@
 /Users/salehhussain/Desktop/web/dotNet/sqlServerWalkthough/bikeStore/obj/Debug/net8.0/bikeStore.pdb
 /Users/salehhussain/Desktop/web/dotNet/sqlServerWalkthough/bikeStore/obj/Debug/net8.0/bikeStore.genruntimeconfig.cache
 /Users/salehhussain/Desktop/web/dotNet/sqlServerWalkthough/bikeStore/obj/Debug/net8.0/ref/bikeStore.dll
+/Users/salehhussain/Desktop/web/dotNet/sqlServerWalkthough/bikeStore/obj/Debug/net8.0/bikeStore.sourcelink.json
