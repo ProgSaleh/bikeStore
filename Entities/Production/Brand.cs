@@ -19,5 +19,7 @@ namespace bikeStore.Entities.Production
       [Column("updated_at")]
       [Required]
       public DateTime UpdatedAt { get; set; }
+
+      public ICollection<Product>? Products { get; set; }
   }
 }

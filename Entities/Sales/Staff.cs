@@ -26,6 +26,7 @@ namespace bikeStore.Entities.Sales
     [Column("email")]
     [MaxLength(255)]
     [Required]
+    [EmailAddress]
     public required string Email { get; set; }
 
     [Column("phone")]

@@ -1,5 +1,4 @@
 
-//  TODO: add navigation props after building all data models.
 namespace bikeStore.Entities.Sales
 {
   /*
@@ -24,6 +23,7 @@ namespace bikeStore.Entities.Sales
 
     [Column("email")]
     [MaxLength(255)]
+    [EmailAddress]
     public string? Email { get; set; }
 
     [Column("street")]
@@ -49,5 +49,7 @@ namespace bikeStore.Entities.Sales
     [Column("updated_at")]
     [Required]
     public DateTime UpdatedAt { get; set; }
+
+    public ICollection<Order>? Orders { get; set; }
   }
 }

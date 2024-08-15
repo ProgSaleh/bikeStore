@@ -26,6 +26,7 @@ namespace bikeStore.Entities.Sales
     [Column("email")]
     [MaxLength(255)]
     [Required]
+    [EmailAddress]
     public required string Email { get; set; }
 
     [Column("street")]
@@ -51,5 +52,7 @@ namespace bikeStore.Entities.Sales
     [Column("updated_at")]
     [Required]
     public DateTime UpdatedAt { get; set; }
+
+    public List<Order>? Orders { get; set; }
   }
 }

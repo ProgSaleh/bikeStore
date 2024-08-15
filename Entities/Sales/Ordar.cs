@@ -11,8 +11,10 @@ namespace bikeStore.Entities.Sales
   public int Id { get; set; }
 
   [Column("customer_id")]
-  // [ForeignKey("CustomerId")]
+  [ForeignKey("CustomerId")]
   public int CustomerId { get; set; }
+  
+  public Customer? Customer { get; set; }
 
   [Column("order_status")]
   [Required]
@@ -31,13 +33,17 @@ namespace bikeStore.Entities.Sales
 
   [Column("store_id")]
   [Required]
-  // [ForeignKey("StoreId")]
+  [ForeignKey("StoreId")]
   public required int StoreId { get; set; }
+  
+  public required Store Store { get; set; }
 
   [Column("staff_id")]
   [Required]
-  // [ForeignKey("StaffId")]
+  [ForeignKey("StaffId")]
   public required int StaffId { get; set; }
+
+  public required Staff Staff { get; set; }
 
   [Column("created_at")]
   [Required]
@@ -46,5 +52,7 @@ namespace bikeStore.Entities.Sales
   [Column("updated_at")]
   [Required]
   public DateTime UpdatedAt { get; set; }
+
+  public required List<OrderItem> OrderItems { get; set; }
   }
 }

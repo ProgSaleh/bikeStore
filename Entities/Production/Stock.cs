@@ -1,3 +1,5 @@
+using bikeStore.Entities.Sales;
+
 namespace bikeStore.Entities.Production
 {
   [Table("stocks", Schema = "production")]
@@ -6,8 +8,12 @@ namespace bikeStore.Entities.Production
   [Column("store_id")]
   public int StoreId { get; set; }
 
+  public required Store Store { get; set; }
+
   [Column("product_id")]
   public int ProductId { get; set; }
+
+  public Product? Product { get; set; }
 
   [Column("quantity")]
   public int Quantity { get; set; }

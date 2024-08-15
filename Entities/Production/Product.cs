@@ -7,7 +7,6 @@ namespace bikeStore.Entities.Production
   [Column("product_id")]
   public int Id { get; set; }
 
-
   [Column("product_name")]
   [MaxLength(255)]
   [Required]
@@ -15,18 +14,20 @@ namespace bikeStore.Entities.Production
 
   [Column("brand_id")]
   [Required]
-  // [ForeignKey]
+  [ForeignKey("BrandId")]
   public int BrandId { get; set; }
+
+  public required Brand Brand { get; set; }
 
   [Column("category_id")]
   [Required]
   public required int CategoryId { get; set; }
 
+  public required Category Category { get; set; }
   
   [Column("model_year")]
   [Required]
   public required short ModelYear { get; set; }
-
 
   [Column("list_price")]
   [Required]
